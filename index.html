@@ -1,54 +1,57 @@
 <!DOCTYPE html>
 <html>
-<html lang="en">
+
 <head>
-    
-    <meta charset="UTF-8">
-    <meta name ="viewport", content="width=device-width", initial-scale="1.0">
-    <title>Simple Calculator</title>
-    <link rel="stylesheet" href="styles.css">
-    <h3 id="pageTitle">Simple Calculator </h3>
-    
+<title>Geogame</title>
+<link rel="stylesheet" href="styles.css">
+
 </head>
 <body>
-    <div id="calculator"> 
-        <input id="display" readonly>
-        <div id = "keys">
 
-            <button onclick="clearDisplay()"class="top">AC</button>
-            <button onclick="deleteCharacter()"class="top">DEL</button>
-            <button onclick="appendToDisplay('%')"class="top">%</button>
-            <button onclick="appendToDisplay('/')"class="operator">÷</button>
-          
-            <button onclick="appendToDisplay('7')">7</button>
-            <button onclick="appendToDisplay('8')">8</button>
-            <button onclick="appendToDisplay('9')">9</button>
-            <button onclick="appendToDisplay('*')"class="operator">×</button>
+<div class="top">
+<h3>Geography Trivia</h3>
+<div class="tab-container">
+    <button type = "button" class = "tab" onclick= "switchTab(this, 'outlines')">Country Outlines</button>
+    <button type = "button" class = "tab" onclick="switchTab(this, 'flags')">Country Flags</button>
+    <button type = "button" class = "tab" onclick="switchTab(this, 'capitals')">Country Capitals</button>
+    <div class="tab-indicator"></div>
+</div>
+</div>
 
-            
-            <button onclick="appendToDisplay('4')">4</button>
-            <button onclick="appendToDisplay('5')">5</button>
-            <button onclick="appendToDisplay('6')">6</button>
-            <button onclick="appendToDisplay('-')"class="operator">-</button>
-            
-            <button onclick="appendToDisplay('1')">1</button>
-            <button onclick="appendToDisplay('2')">2</button>
-            <button onclick="appendToDisplay('3')">3</button>
-            <button onclick="appendToDisplay('+')"class="operator">+</button>
-            
-            <button onclick="flipSign()">+/-</button>
-            <button onclick="appendToDisplay('0')">0</button>
-            <button onclick="appendToDisplay('.')">.</button>
-            <button onclick="calculate()"class="operator">=</button>
-            
-
-           
-
-        </div>
-
-    </div>
+<div class="scoreboard">
+<span id="score">Score: 0</span>
+<span id="highscore">High Score: 0</span>
+</div>
 
 
-<script src = "index.js"></script>
+<div id="outline-game" class="game-active">
+    
+<div class="outline-image">
+    <h3 id="country-name"></h3>
+    <img id="country-outline",src="" alt="Country Outline">
+    
+</div>
+
+<div class="guess-section">
+    <input type="text", id="input", placeholder="">
+    
+    <button class = "giveup" onclick="giveup()">Give Up</button>
+    <button class = "submit" onclick="checkGuess()">Guess</button>
+    
+    
+
+</div>
+
+<div class="feedback"></div>
+
+
+</div>
+
+
+<div id="flag-game" class="game-hidden"></div>
+
+<div id="capital-game" class="game-hidden"></div>
+
+<script src="index.js"></script>
 </body>
 </html>
