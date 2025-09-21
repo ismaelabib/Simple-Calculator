@@ -1,85 +1,198 @@
 body {
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: hsl(186, 60%, 71%);
-    
-}
-#pageTitle {
-    color: white;
-    font-size: 4em;
-    position: relative;
-    bottom: 270px;
-}
-#calculator{
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: hsl(186, 100%, 94%);
-    max-width: 300px;
-    border-radius: 20px;
-    border-color: black;
-    position: absolute;
-    
-    overflow: hidden;
-}
-#display{
-    max-width: 290px;
-    height: 90px;
-    text-align: right;
-    font-size: 3rem;
-    border: none;
-    background-color: hsl(186, 100%, 99%);
-    color: hsl(181, 40%, 25%);
-}
-#keys{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    column-width: 25px;
-    gap: 10px;
-    padding: 25px;
-}
-button {
-    width:50px;
-    height:50px;
-    border-radius: 15px;
-    border: none;
-    background-color: hsl(181, 40%, 80%);
-    font-size: 1.4rem;
-  
-    color: hsl(181, 40%, 25%);
+    margin: 0px;
+    padding: 0;
+    background-color:  hsl(224, 25%, 45%);
     cursor: pointer;
-}
-button:hover {
-    background-color: hsl(181, 40%, 85%);;
-}
-button:active{
-    background-color: hsl(181, 40%, 90%);
-}
+    padding-bottom: 0px;
 
-.operator{
-    background-color: hsl(188, 47%, 71%);
-    color: hsl(181, 40%, 25%);
 }
-.operator:hover{
-    background-color: hsl(188, 47%, 76%);
-}
-.operator:active{
-    background-color: hsl(188, 47%, 83%);
-}
-
 
 .top{
-    background-color: hsl(181, 44%, 75%);
-    color:  hsl(181, 40%, 25%);
-    font-size: 1.3rem;
-    
-    
-    font-family: Georgia, 'Times New Roman', Times, serif;
+ 
+ background-image: linear-gradient(to bottom right, hsl(224, 25%, 45%), hsl(224, 25%, 45%)) ;
 }
-.top:hover{
-    background-color: hsl(181, 44%, 66%);
+
+h3{
+    margin-top: 0;
+    padding-top: 15px;
+    font-size: 3rem;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif ;
+    color: hsl(0, 0%, 100%);
 }
-.top:active{
-    background-color: hsl(181, 44%, 76%);
+#country-name {
+    max-width: 100%;
+    max-height: 100%;
+    font-size: 2rem;
+    margin: 5px;
+}
+
+
+
+.tab-container{
+    display:flex;
+    border-radius: 50px;
+    background: hsl(224, 25%, 32%);
+    justify-content: center;
+    margin:20px auto;
+    padding: 5px;
+    padding-left: 0;
+    padding-right: 0;
+    max-width: 600px;
+    position: relative;
+    gap: 10px;
+}
+
+.tab-indicator {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    height: auto;
+    width: 0;
+    background: hsl(224, 25%, 62%);
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+
+.tab {
+    padding: 10px 25px;
+    border: none;
+    border-radius: 50px;
+    background: transparent;
+    font-family: Arial, Helvetica, sans-serif ;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: hsl(0, 0%, 100%);
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    transition: color 0.3s ease;
+}
+
+.tab:hover {
+   
+
+   color: hsl(0, 0%, 75%);
+    
+}
+
+
+.scoreboard{
+    display: flex;
+    justify-content: center;
+    margin-top: -10px;
+    color: hsl(0, 0%, 100%);
+
+}
+#score{
+    padding-right: 10px;
+    font-family: Arial, Helvetica, sans-serif ;
+    font-size: 1.5rem;
+    color: hsl(0, 0%, 100%);
+
+}
+#highscore{
+    padding-left: 10px;
+    font-family: Arial, Helvetica, sans-serif ;
+    font-size: 1.5rem;
+}
+
+.game-hidden{
+    visibility: hidden;
+}
+.game-active{
+    visibility: visible;
+    margin-top: -5px;
+    display: block;
+    text-align: center;
+    width: 600px;
+    margin: 0 auto;
+    
+}
+
+.outline-image {
+    width: 500px;
+    height: 350px;
+
+    border-radius: 50px;
+    margin: 20px auto;
+    border: 2px solid hsl(0, 0%, 100%);
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(to bottom right, hsl(224, 25%, 25%), hsl(224, 25%, 55%)) ;
+
+}
+
+.guess-section {
+ 
+    margin-top: -10px;
+
+    
+}
+::placeholder{
+    color: hsl(0, 0%, 100%);
+
+
+}
+#input{
+    padding-left: 15px;
+    width: 395px;
+    height: 50px;
+    font-family: Arial, Helvetica, sans-serif ;
+    font-size: 1.4rem;
+    color: hsl(102, 49%, 93%);
+    border: 1.5px solid hsl(0, 0%, 100%);    border-radius: 50px;
+    margin-right: 10px;
+    background-image: linear-gradient(to bottom right, hsl(224, 25%, 25%), hsl(224, 25%, 55%)) ;
+
+}
+.submit {
+    margin: 10px;
+    width: 150px;
+    height: 50px;
+    border: 1.5px solid hsl(0, 0%, 100%);    border-radius: 50px;
+    font-family: Arial, Helvetica, sans-serif ;
+    font-size: 1.4rem;
+    background-image: linear-gradient(to bottom right, hsl(224, 25%, 25%), hsl(224, 25%, 55%)) ;
+    color: hsl(0, 0%, 100%);
+
+    cursor: pointer;
+}
+.giveup {
+    width: 150px;
+    height: 50px;
+    border: 1.5px solid hsl(0, 0%, 100%);    border-radius: 50px;
+    font-family: Arial, Helvetica, sans-serif ;
+    font-size: 1.4rem;
+    background-image: linear-gradient(to bottom right, hsl(224, 25%, 25%), hsl(224, 25%, 55%)) ;
+    cursor: pointer;
+    color: hsl(0, 0%, 100%);
+
+}
+.feedback{
+    font-size: 1.5 rem;
+    font-family: Arial, Helvetica, sans-serif ;
+
+
+}
+.submit:hover{
+        background-image: linear-gradient(to bottom right, hsl(122, 78%, 42%) , hsl(76, 95%, 43%));
+}
+.submit:active{
+            background-image: linear-gradient(to bottom right, hsl(122, 78%, 25%) , hsl(76, 95%, 25%));
+}
+
+.giveup:hover{
+        background-image: linear-gradient(to bottom right, hsl(0, 86%, 50%) , hsl(10, 83%, 55%));
+}
+.giveup:active{
+        background-image: linear-gradient(to bottom right, hsl(0, 86%, 35%) , hsl(10, 83%, 35%));
+}
+
+#country-outline {
+    max-width: 80%;
+    max-height: 80%;
 }
